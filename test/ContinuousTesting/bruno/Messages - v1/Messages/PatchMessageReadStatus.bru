@@ -1,0 +1,16 @@
+meta {
+  name: PatchMessageReadStatus
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/messages/:messageId/:isRead
+  body: none
+  auth: none
+}
+
+params:path {
+  messageId: 
+  isRead: 
+}

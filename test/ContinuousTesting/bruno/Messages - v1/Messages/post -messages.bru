@@ -1,0 +1,21 @@
+meta {
+  name: post /messages
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/messages
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "sender": "",
+    "receiver": "",
+    "title": "",
+    "content": "",
+    "messageIdRef": ""
+  }
+}

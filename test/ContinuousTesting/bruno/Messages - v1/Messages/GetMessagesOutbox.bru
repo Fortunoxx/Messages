@@ -1,0 +1,15 @@
+meta {
+  name: GetMessagesOutbox
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/messages/outbox/:sender
+  body: none
+  auth: none
+}
+
+params:path {
+  sender: 
+}

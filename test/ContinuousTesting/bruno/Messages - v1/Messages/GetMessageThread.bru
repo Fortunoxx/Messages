@@ -1,0 +1,32 @@
+meta {
+  name: GetMessageThread
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/messages/{{messageId}}/thread
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+  res.body: isNotEmpty
+  ~res.body: isJson
+}
+
+script:post-response {
+  const key = "ids";
+  const arr = []
+  bru.setVar(key,arr)
+  
+  res.getBody().forEach(function(ele) {
+    arr.push(ele.id);
+  });
+                   
+  bru.setVar(key,arr)
+  
+  // console.log(bru.getVar(key));
+  
+}

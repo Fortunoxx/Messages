@@ -1,0 +1,15 @@
+meta {
+  name: GetMessagesInbox
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/messages/inbox/:receiver
+  body: none
+  auth: none
+}
+
+params:path {
+  receiver: 
+}

@@ -1,0 +1,23 @@
+meta {
+  name: PostMessageAttachments
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/messages/:messageId/attachment
+  body: json
+  auth: none
+}
+
+params:path {
+  messageId: 
+}
+
+body:json {
+  {
+    "fileName": "",
+    "contentType": "",
+    "data": ""
+  }
+}
